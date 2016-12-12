@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import org.joda.time.DateTime;
 import org.parceler.Parcels;
@@ -37,6 +38,7 @@ import psp.weatherdam.interfaces.OpenWeatherAPI;
 import psp.weatherdam.pojo.ElementoHistorial;
 import psp.weatherdam.pojo.LocalizacionEnMapa;
 import psp.weatherdam.pojo.TiempoDelDia;
+import psp.weatherdam.pojo.TiempoProximo;
 import psp.weatherdam.pojo.googlemapsautocomp.BusquedaMapsAutocomp;
 import psp.weatherdam.pojo.googlemapsdetail.BusquedaMapsDetail;
 import psp.weatherdam.pojo.googlemapsdetail.Location;
@@ -53,9 +55,8 @@ public class MainActivity extends AppCompatActivity implements IBusquedaListener
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private static RetrofitApplication retrofitApplication;
     private Retrofit actualRetrofit;
-    private TiempoDelDia datosDelTiempoActual;
-    private List<TiempoDelDia> datosDelTiempoProximo;
-    private LocalizacionEnMapa localizacionEnMapa;
+    private String currentPlaceId;
+    private Bundle extras;
     private DateTime fechaAux;
     private static final int TAB_HISTORIAL = 0;
     private static final int TAB_MAPA = 2;
@@ -67,13 +68,13 @@ public class MainActivity extends AppCompatActivity implements IBusquedaListener
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        cargarDatosIniciales();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        cargarDatosIniciales();
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
@@ -86,7 +87,6 @@ public class MainActivity extends AppCompatActivity implements IBusquedaListener
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         //No lo uso, asi que lo marco como GONE
         fab.setVisibility(View.GONE);
@@ -95,6 +95,9 @@ public class MainActivity extends AppCompatActivity implements IBusquedaListener
 
     public void cargarDatosIniciales(){
         String placeidSevilla = "ChIJkWK-FBFsEg0RSFb-HGIY8DQ";
+        extras = new Bundle();
+        retrofitApplication = (RetrofitApplication) getApplication();
+        retrofitApplication.iniciarRetrofit();
         /* Intento limpiar el historial al iniciar la aplicación, pero hace que
            la busqueda de Sevilla predeterminada no salga en él
 
@@ -103,25 +106,7 @@ public class MainActivity extends AppCompatActivity implements IBusquedaListener
         editor.clear();
         editor.commit();
         */
-
-        //Inicia los servicios Retrofit
-        retrofitApplication = (RetrofitApplication) this.getApplication();
-        retrofitApplication.iniciarRetrofit();
-        actualRetrofit = retrofitApplication.getRetrofitGoogleDetail();
-        GoogleMapsAPI api = actualRetrofit.create(GoogleMapsAPI.class);
-        Call<BusquedaMapsDetail> llamada = api.getMapsDetail(placeidSevilla);
-
-        llamada.enqueue(new Callback<BusquedaMapsDetail>() {
-            @Override
-            public void onResponse(Response<BusquedaMapsDetail> response, Retrofit retrofit) {
-                setearDatos(response.body());
-            }
-
-            @Override
-            public void onFailure(Throwable t) {
-
-            }
-        });
+        setearDatos(placeidSevilla);
 
     }
 
@@ -142,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements IBusquedaListener
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_buscar) {
-            DialogFragment dialogoBusqueda = new BusquedaDialogFragment();
+            DialogFragment dialogoBusqueda = new BusquedaDialogFragment(this);
             dialogoBusqueda.show(getSupportFragmentManager(), "Diálogo");
             dialogoBusqueda.setCancelable(true);
         }else{
@@ -155,7 +140,7 @@ public class MainActivity extends AppCompatActivity implements IBusquedaListener
 
     @Override
     public void onClickBuscar(BusquedaMapsDetail busquedaMapsDetail) {
-        setearDatos(busquedaMapsDetail);
+        setearDatos(busquedaMapsDetail.getResult().getPlace_id());
     }
 
     @Override
@@ -165,24 +150,17 @@ public class MainActivity extends AppCompatActivity implements IBusquedaListener
         Call<BusquedaMapsAutocomp> busqueda = api.getMapsAutocomp(municipio.getNombre());
         BusquedaMapsAutocomp resultados = null;
 
-        try {
-             resultados = busqueda.execute().body();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        busqueda.enqueue(new Callback<BusquedaMapsAutocomp>() {
+            @Override
+            public void onResponse(Response<BusquedaMapsAutocomp> response, Retrofit retrofit) {
+                setearDatos(response.body().getPredictions().get(0).getPlace_id());
+            }
 
-        api = retrofitApplication.getRetrofitGoogleDetail().create(GoogleMapsAPI.class);
+            @Override
+            public void onFailure(Throwable t) {
 
-        Call<BusquedaMapsDetail> busqueda2 = api.getMapsDetail(resultados.getPredictions().get(0).getPlaceId());
-        BusquedaMapsDetail resultados2 = null;
-
-        try {
-            resultados2 = busqueda2.execute().body();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        setearDatos(resultados2);
+            }
+        });
     }
 
     @Override
@@ -190,54 +168,32 @@ public class MainActivity extends AppCompatActivity implements IBusquedaListener
 
     }
 
-    void setearDatos(BusquedaMapsDetail datosDelSitio){
+    void setearDatos(String placeid){
+        currentPlaceId = placeid;
         fechaAux = new DateTime(new Date());
         //Por alguna razon se crea con una hora menos de la actual, asi que se la sumo
-        fechaAux.plusHours(1);
+        fechaAux = fechaAux.plusHours(1);
 
-        OpenWeatherAPI api = retrofitApplication.getRetrofitOpenWeather().create(OpenWeatherAPI.class);
-        //Consigo la latitud y longitud del resultado de la anterior llamada
-        Location location = datosDelSitio.getResult().getGeometry().getLocation();
+        GoogleMapsAPI api = retrofitApplication.getRetrofitGoogleDetail().create(GoogleMapsAPI.class);
+        Call<BusquedaMapsDetail> llamada = api.getMapsDetail(currentPlaceId);
 
-        /* TODO SETEO DEL MAPA */
-
-        Call<BusquedaOpenWeather> llamada2 = api.getBusquedaOpenWeather(location.getLat(), location.getLng());
-
-        //Estos son los datos meteorologicos actuales de Sevilla
-        BusquedaOpenWeather tiempoActual = null;
-
-        llamada2.enqueue(new Callback<BusquedaOpenWeather>() {
+        llamada.enqueue(new Callback<BusquedaMapsDetail>() {
             @Override
-            public void onResponse(Response<BusquedaOpenWeather> response, Retrofit retrofit) {
-                //ESTO GUARDA LOS DATOS DE LA BUSQUEDA PARA CUANDO SE CAMBIE EL FRAGMENT A "MAPA"
-                asignarDatosActuales(response.body());
-            }
+            public void onResponse(Response<BusquedaMapsDetail> response, Retrofit retrofit) {
+                BusquedaMapsDetail datosDelSitio = response.body();
 
-            @Override
-            public void onFailure(Throwable t) {
+                /* SETEO DEL HISTORIAL */
+                if(String.valueOf(fechaAux.getMinuteOfHour()).length() < 2) {
+                    registrarEnHistorial(new ElementoHistorial(
+                            datosDelSitio.getResult().getName(),
+                            fechaAux.getHourOfDay() + ":0" + fechaAux.getMinuteOfHour()));
+                } else {
+                    registrarEnHistorial(new ElementoHistorial(
+                            datosDelSitio.getResult().getName(),
+                            fechaAux.getHourOfDay() + ":" + fechaAux.getMinuteOfHour()));
+                }
 
-            }
-        });
-
-        localizacionEnMapa = new LocalizacionEnMapa(datosDelSitio.getResult().getName(),
-                datosDelSitio.getResult().getGeometry().getLocation().getLat(),
-                datosDelSitio.getResult().getGeometry().getLocation().getLng());
-
-        /* SETEO DEL HISTORIAL */
-
-        registrarEnHistorial(new ElementoHistorial(
-                datosDelSitio.getResult().getName(),
-                fechaAux.getHourOfDay()+":"+fechaAux.getMinuteOfHour()));
-
-        /* TODO SETEO DE LAS PREDICCIONES */
-
-        Call<BusquedaOpenWeatherForecast> llamada3 = api.getBusquedaOpenWeatherForecast(location.getLat(), location.getLng());
-
-        llamada3.enqueue(new Callback<BusquedaOpenWeatherForecast>() {
-            @Override
-            public void onResponse(Response<BusquedaOpenWeatherForecast> response, Retrofit retrofit) {
-                //ESTO GUARDA LOS DATOS DE LA BUSQUEDA PARA CUANDO SE CAMBIE EL FRAGMENT A "PREDICCIONES"
-                asignarDatosProximosDias(response.body());
+                extras.putString("placeid",currentPlaceId);
             }
 
             @Override
@@ -247,96 +203,6 @@ public class MainActivity extends AppCompatActivity implements IBusquedaListener
         });
 
 
-    }
-
-    private void asignarDatosActuales(BusquedaOpenWeather tiempoActual) {
-        List<String> listaTemp = new ArrayList<>();
-        List<String> listaViento = new ArrayList<>();
-
-        listaTemp.add(String.valueOf(tiempoActual.getMain().getTempMin()+"º - "+tiempoActual.getMain().getTempMax()+"º"));
-        listaViento.add(String.valueOf(tiempoActual.getWind().getSpeed()));
-
-        TiempoDelDia diaActual = new TiempoDelDia(tiempoActual.getName(),
-                fechaAux.getDayOfWeek(),
-                fechaAux.getDayOfMonth()+"/"+fechaAux.getMonthOfYear()+"/"+fechaAux.getYear(),
-                tiempoActual.getWeather().get(0).getDescription(),
-                tiempoActual.getWeather().get(0).getIcon(),
-                listaTemp,
-                listaViento);
-
-        datosDelTiempoActual = diaActual;
-    }
-
-    //TODO inacabado
-    private void asignarDatosProximosDias(BusquedaOpenWeatherForecast tiempoProximosDias) {
-        List<TiempoDelDia> proximosDias = new ArrayList<>();
-
-        DateTime _1DiaMas = fechaAux.plusDays(1);
-        DateTime _2DiasMas = fechaAux.plusDays(2);
-        DateTime _3DiasMas = fechaAux.plusDays(3);
-        DateTime _4DiasMas = fechaAux.plusDays(4);
-
-        List<psp.weatherdam.pojo.openweatherforecast.List> listHoy = new ArrayList<>();
-        List<psp.weatherdam.pojo.openweatherforecast.List> list1DiaMas = new ArrayList<>();
-        List<psp.weatherdam.pojo.openweatherforecast.List> list2DiasMas = new ArrayList<>();
-        List<psp.weatherdam.pojo.openweatherforecast.List> list3DiasMas = new ArrayList<>();
-        List<psp.weatherdam.pojo.openweatherforecast.List> list4DiasMas = new ArrayList<>();
-
-        //Separo los datos de los distintos dias
-        for (psp.weatherdam.pojo.openweatherforecast.List elemetoListaPredicciones : tiempoProximosDias.getList()) {
-            if (elemetoListaPredicciones.getDt_txt().split(" ")[0].equalsIgnoreCase(fechaAux.getYear() + "-" + fechaAux.getMonthOfYear() + "-" + fechaAux.getDayOfMonth())) {
-                listHoy.add(elemetoListaPredicciones);
-            } else if (elemetoListaPredicciones.getDt_txt().split(" ")[0].equalsIgnoreCase(_1DiaMas.getYear() + "-" + _1DiaMas.getMonthOfYear() + "-" + _1DiaMas.getDayOfMonth())) {
-                list1DiaMas.add(elemetoListaPredicciones);
-            } else if (elemetoListaPredicciones.getDt_txt().split(" ")[0].equalsIgnoreCase(_2DiasMas.getYear() + "-" + _2DiasMas.getMonthOfYear() + "-" + _2DiasMas.getDayOfMonth())) {
-                list2DiasMas.add(elemetoListaPredicciones);
-            } else if (elemetoListaPredicciones.getDt_txt().split(" ")[0].equalsIgnoreCase(_3DiasMas.getYear() + "-" + _3DiasMas.getMonthOfYear() + "-" + _3DiasMas.getDayOfMonth())) {
-                list3DiasMas.add(elemetoListaPredicciones);
-            } else if (elemetoListaPredicciones.getDt_txt().split(" ")[0].equalsIgnoreCase(_4DiasMas.getYear() + "-" + _4DiasMas.getMonthOfYear() + "-" + _4DiasMas.getDayOfMonth())) {
-                list4DiasMas.add(elemetoListaPredicciones);
-            }
-        };
-
-        List<List> listaDeListaDeDias = new ArrayList<>();
-        listaDeListaDeDias.add(listHoy);
-        listaDeListaDeDias.add(list1DiaMas);
-        listaDeListaDeDias.add(list2DiasMas);
-        listaDeListaDeDias.add(list3DiasMas);
-        listaDeListaDeDias.add(list4DiasMas);
-
-        datosDelTiempoProximo = new ArrayList<>();
-
-
-        for (List<psp.weatherdam.pojo.openweatherforecast.List> listaDias : listaDeListaDeDias) {
-
-            String estado = null;
-            String iconoEstado = null;
-            List<String> listaPrecip = new ArrayList<>();
-            List<String> listaTemp = new ArrayList<>();
-            List<String> listaViento = new ArrayList<>();
-
-
-            for (psp.weatherdam.pojo.openweatherforecast.List currentList : listaDias) {
-                listaTemp.add(currentList.getMain().getTempMin() + "º-" + currentList.getMain().getTempMax() + "º");
-                listaPrecip.add(currentList.getRain().get3h() + " mm");
-                listaViento.add(currentList.getWind().getSpeed() + " m/s");
-                //Solo coge el primer estado
-                estado = currentList.getWeather().get(0).getDescription();
-                iconoEstado = currentList.getWeather().get(0).getIcon();
-
-            }
-
-            datosDelTiempoProximo.add(new TiempoDelDia(tiempoProximosDias.getCity().getName(),
-                    fechaAux.getDayOfWeek(),
-                    fechaAux.getDayOfMonth() + "/" + fechaAux.getMonthOfYear() + "/" + fechaAux.getYear(),
-                    estado,
-                    iconoEstado,
-                    listaTemp,
-                    listaPrecip,
-                    listaViento));
-        }
-
-        datosDelTiempoProximo = proximosDias;
     }
 
     void registrarEnHistorial(ElementoHistorial elementoHistorial) {
@@ -402,32 +268,21 @@ public class MainActivity extends AppCompatActivity implements IBusquedaListener
 
         @Override
         public Fragment getItem(int position) {
-            Bundle extras = null;
             switch (position) {
                 case TAB_HISTORIAL:
                     fragmentActual = new HistorialFragment();
-
                     break;
                 case TAB_MAPA:
                     fragmentActual = new MapFragment();
-
-                    extras = new Bundle();
-                    extras.putParcelable(Constantes.PARCEL_LOCATION, Parcels.wrap(localizacionEnMapa));
-                    extras.putParcelable(Constantes.PARCEL_WEATHERNOW, Parcels.wrap(datosDelTiempoActual));
-                    fragmentActual.setArguments(extras);
-
                     break;
                 case TAB_PREDICCIONES:
                     fragmentActual = new PrediccionesFragment();
-
-                    extras = new Bundle();
-                    extras.putParcelable(Constantes.PARCEL_PREDICTIONS, Parcels.wrap(datosDelTiempoProximo));
-
                     break;
                 default:
                     fragmentActual = new HistorialFragment();
             }
 
+            fragmentActual.setArguments(extras);
             return fragmentActual;
         }
 

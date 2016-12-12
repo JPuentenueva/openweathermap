@@ -15,7 +15,7 @@ public class Result {
     private String id;
     private String name;
     private List<Photo> photos = null;
-    private String placeId;
+    private String place_id;
     private String reference;
     private String scope;
     private List<String> types = null;
@@ -171,19 +171,19 @@ public class Result {
     /**
      * 
      * @return
-     *     The placeId
+     *     The place_id
      */
-    public String getPlaceId() {
-        return placeId;
+    public String getPlace_id() {
+        return place_id;
     }
 
     /**
      * 
-     * @param placeId
+     * @param place_id
      *     The place_id
      */
-    public void setPlaceId(String placeId) {
-        this.placeId = placeId;
+    public void setPlace_id(String place_id) {
+        this.place_id = place_id;
     }
 
     /**

@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="2a18547ea91d258866d132c2a763185f15b01b25">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-9.6.1_cac3b49ffceabea754e50a75ebbccbb946af87ef.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="ac8365c87591065db07f7bac8551504504832cd4">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-database-connection-9.6.1_7a94a71936c6eab31aed49186300c8844cf2bb88.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="da3f763afd39da1c947d9442847c837e9182a09f">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-9.6.1_8b5eebcdeecf233ff6106a640fb7757c42205a51.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.0.1_ee0f79f0f15ff6e59579184b08cad05f7fac5def.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="6ffe8b28ab61e5ee92ab9431a220379790c71ddf">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-module-9.6.1_ecf3adf8f5ef480396b4b1eb415457fc6fb964d1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="518adc52081d41724932b41bc132e4d50a352b86">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-identity-9.6.1_2cbfc6f135fa3ed77eef5d61944fe4c1f1bdcb8e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="80dd8bea08bc5fe10b10a3243b8279c856ccc690">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-messaging-9.6.1_8ab7a3bfde1baa0557898bddd28357432cdd6df8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-9.6.1_b2834738ec3ff3efac72501c7cd8f5925989a3a9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="ad7706f8bb4a985656a8d2142f74021c8b0e03d8">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gcm-9.6.1_5e50fac0956cb9c2850cc54f3f6fc2bb53945623.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="ff9be0a1e75a21c372735930d8987a55b5e6065f">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-panorama-9.6.1_62a72c1e715a9b052ba6c7846d262987d579cc43.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_c9db1f28ee44edc95cf6142f9bc867191388b8e8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="a136366045678579300d161de97c2211c4c4f7a0">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-cast-9.6.1_54573a5f38a0b5f2c7de6b3febb32583ce54c8b1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c828add497d2b7a3de7c047bf72050cd4b7521a1">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-safetynet-9.6.1_4940c25bf0fe4c56a1da7828ecdd260cc1e6f680.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.0.1_85a843994df80f17da386a27e4618b207fe0ea70.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\gson-2.3.1_f3959e1683524104f9d2f7d3545f9c0eaac29cee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="159494eb362396d073d8c922b77e40c0da5fc5bc">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-storage-common-9.6.1_51945db83fffa208c7dfa7a20fb540fa77dc2d29.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="1108575c7dc7b7f5b378b3290ac90de81a9b8830">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-25.0.1_414c10ee1f3d2c1813586803edb28e8ad9320e15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="8ebae43cd06058e99e08c8b4d305b72f2b9927c6">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-plus-9.6.1_da7f72111daa565decfbc347a0931d404f77665d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="6ff796a3173787afe2e712f3aec6f5b99796118e">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-ads-lite-9.6.1_a6393a283824d7c8115db84a8365f81b1bed72aa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="a1c351dc10b92d638da57f3a6513f87cfbdc9f83">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-9.6.1_b27573ad33c34e09b1bc36bfa53d93a8aabd285b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.0.1_22b9ae0db95030c59130cabecf0cb9f421b2fa83.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\support-annotations-25.0.1_146db9b12f6475ffae529874d5fe85337208f70a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="79f521967ad7f49b34748db89df02852c2b2f87b">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-location-9.6.1_5271bc76e38ee22968a0d559da31363d76ccbf2a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="4df40545c9b875855f3dd9d4928e5d07f07c20ba">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-crash-9.6.1_90a26a93ab24f4e6f0c548d9faf582cbf3c69d1d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.android.support-mediarouter-v7-24.0.0_55b9eabd8ed5a2050d9b0fb7591bd8da88cc0643.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_7f906005dfe89d73a5fbbd57c9d40802d344cf39.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\design\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="3b236883e0df6002cabb01ce57d00a5b1e5de610">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.android.support-design-25.0.1_ec0adcfa2cf8cfad2a53fc2add00c536e809ea80.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\retrofit\2.0.0-beta2\880d9e0997b2d1bfc98e0d121ced33ee5d04aac4\retrofit-2.0.0-beta2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="880d9e0997b2d1bfc98e0d121ced33ee5d04aac4">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\retrofit-2.0.0-beta2_1157a0861488c1e3b4bc41c0316a5a72b79482c4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast-framework\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="9c0cf3d4f9d7d076f301e110b92e18ae23da12c2">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-cast-framework-9.6.1_c542c2a00be5b68cef068eea16a37e68ffacd910.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="af7582c6b327449c6d32518e6a10307860b7b5d6">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-9.6.1_31353d8c4d34a5a76ae4b3108776f8021a0e93fc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="d45c048bb1c55cf963899190e507065aea8e5be9">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-games-9.6.1_3abffc7240008492c9f37c0ee1349896bd3654bc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="ee0ccb43f6ab276191b7f2d77c305fa9beb26db9">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-clearcut-9.6.1_c699f89a126eeb64826e3176f5de8a2611dc5d62.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\picasso-2.5.2_86751e4e021bc0c771fc6310832d70f41406688f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="8c6ef5bd4072f8cda2b89d8356ea7d8acd0683aa">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-storage-9.6.1_1d2c12ebcaec8eb705762f1221392761a421b4fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f8db47be01cbe8cfa81e9cecce5ff1371ed1ad95">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-drive-9.6.1_1aff619c3552fdf645141d634bf211733f7e0a7b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.0.1_79dc2de9beea0aa0d02903d4e19436e042175573.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="4a36600281a648769411ef642c331851732bf29e">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-9.6.1_1e53ff320bd4a0403a5dbe6e04bfac8470f51044.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c4394d46152165cd3256fb711ac94f66a28fbae1">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wearable-9.6.1_7d65dfd7e4fb14c1c2a748625589ef85cad1aa6d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.9.6\e370a92153bf66da17549ecc78c69ec6c6ec9f41\joda-time-2.9.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="e370a92153bf66da17549ecc78c69ec6c6ec9f41">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\joda-time-2.9.6_f40d7fa0cfcc5e9f43fde6a6b6ad42f3702ab0f9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\.gradle\caches\modules-2\files-2.1\org.parceler\parceler-api\1.1.1\d081ad6f7c51627ebe2dbf157cc525cbf5e9c821\parceler-api-1.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="d081ad6f7c51627ebe2dbf157cc525cbf5e9c821">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\parceler-api-1.1.1_ba44e98ef2bfb7f23829a2e96ebd34322fe3d5d7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.0.1_611b01acfabd6592f23c51c1dea0d7e09d28c32e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\internal_impl-24.0.0_92f2fe856b83d089df7e4a656245a57e63141932.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="a53ac0560ab915a02c50d2e5c7b003381e6fb5e3">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-analytics-impl-9.6.1_c22794dfd1e1d75e0965d69ab880f23122963503.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="a76a6983a23788b3689524d4bed763955afbd306">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-fitness-9.6.1_b2937b256127d4af333e2817ef05cf280f13368b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="62ff84124b89177abc0c27f3e38c9732f2d41617">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-9.6.1_e5459c4871619aa75a3ed4f2d09b52e00d663fa0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.0.1_629fa319bcd979a5b004258a4625f8d1f052da1c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="0efd1b44f47c134fb245914a1d54a55adbfc2f8d">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-impl-9.6.1_b3bedaa7b5c36877ca1af7825cd2a525b8a25361.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_668677c707a78a091d27af152b88e46dfd7328ab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.0.1_1e2567bfd1f2e8d1b62b0c6256d8c19e9a381235.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-awareness\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="90be14317e3f26d18438e8dbf8544500d1dfe07f">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-awareness-9.6.1_14ea197a5f74a8c70a23557e0739c5f9e0f999c2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-places\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="cdddf21e0a8205e9955661061d1735ed10e44a7b">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-places-9.6.1_208e35ec481101bfa33b767b2784e2831e7e6236.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.0.1_93147109a1e85cb9855a0a59197068bb43792e21.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="1e14ebe1cda8491f152083e752ca5bf73cd37bff">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-iid-9.6.1_1ab452afa29a47b6ab90ee39abec4df8d94d629b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\palette-v7\24.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.android.support-palette-v7-24.0.0_2baa2cfc799917d5afe00a0b8f3d4f7b7d8cccff.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="47bbb3ec4b31ba71e125241c090dabe70cbb4de7">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-ads-9.6.1_3f3efd47a4649ff8fb3a84f4cac4b28390627d55.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\okio-1.6.0_50745051d5e1e00847a3abcc2d67a9b3a30f329f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="1ef72e72bc0d05602c366582afa9439f58bb31d6">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-common-9.6.1_0c03f10b57e0ce172da6c1b666fab85a2376f292.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f6aa7c76cbaa867e05dbad0afab1ef0e65c4e55f">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-nearby-9.6.1_efdc247989cc6bff62533b1b0262e5cb5ea9d214.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="1810ae0df0a1b9b539ce97df54e96f2bf8f5ff94">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tagmanager-9.6.1_57ab14b89c64983e104e27043f1459096dd2f357.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="0cae6511c5705869cacf199f8abb0ea84cd10157">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-vision-9.6.1_485803f898a25ae7d56d53595efdccd0302c42b0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.5.0\4de2b4ed3445c37ec1720a7d214712e845a24636\okhttp-2.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\okhttp-2.5.0_43d52f862cc573dcd29a5cbda9107b96a6f60977.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.0.1_db717f19139a2bda6eefc2c1ffa5396e35184960.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="526f4b02f1771fa7607ff1b89fe2e9bd0344fee8">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-analytics-9.6.1_f2b4bcae614021832ebeb003f7f6ea57a095027a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="0e0e0681c26a1f575d3e4c542182dd59bab75fd6">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appinvite-9.6.1_972797b4e9bb496fdfad4cd68728fe635b79fb9b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="465f40f840e583f8b7421a3aacf3fbf08c28f00a">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-base-9.6.1_1db9727eb96c3de0c4c36b97d709dec63f289c04.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f0e96478ca3147bc588aadb9ae467d85b42473cc">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tagmanager-api-9.6.1_6b27bd4497c7955020cca7d91f97ea23ff6fc78b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="dfcba20b85ef3669a8ced0a8760a6df281cbd7c7">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wallet-9.6.1_0c646cc702f6e2b7c546b1d3f5bc28933bef166d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.0.1_8418069dcf6acace6c66c7ff41e6426459af48cb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_9c2ce84f9ff4cecf72b5cc55c4e59d3568672e84.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b75ecdd04a37d31b4a0da2729fc5c558962a529b">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-database-9.6.1_8288b07cb1884490bf79c862e6b51b9e79e0b9f3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="ee61ace5f3e488fc610e1c67693c49186a441f32">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gass-9.6.1_79ca1b559962ca096ac38e397940723f08a14144.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="cc39b4bcc9e7062891db90d5a752fa9e4986f447">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-9.6.1_4a5b28d74ff929f1605abc021274f1189f1272e8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\transition\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c1b6ab157e8e12cb08b9ee82bb5e3c5d22632eb3">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.0.1_51824044f50b95f138300d56c9b16f85b504a18f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\converter-gson\2.0.0-beta2\392c3d09e0f5e7087544093cc0cb23bb9c7af5fa\converter-gson-2.0.0-beta2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="392c3d09e0f5e7087544093cc0cb23bb9c7af5fa">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\converter-gson-2.0.0-beta2_4abaff8260ae92341594cef1f09ea7c57c234516.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_cc9f84cced8966f74b3191ea46ec8a20d97fa9e3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.firebase\firebase-config\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="cf2c4e6607c77b0e671dc5ca252c5ea0d9c1ce0d">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-config-9.6.1_d8c1783042fe1be07ab84e19939b9411745c663a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="0dfc12e4aacf514346ea866560c99807d032bc48">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-iid-9.6.1_8b6d254069c518d84238276be2bd07a16ecbe467.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="77558e74bb2056ef38516296f13a27c4c4fc3e5c">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-common-9.6.1_084585f1f330157587c77d34580e7624345f04bc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-instantapps\9.6.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="babb25794a7599069d34705038744c5760a9a88c">
+        <dex dex="C:\Users\jmpuentenueva\Documents\GitHub\Openweather\WeatherDAM\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-instantapps-9.6.1_090a0f0954c4336ddc9389b913daf58e9a83c376.jar" />
+    </item>
+
+</items>

@@ -2,6 +2,7 @@ package psp.weatherdam.fragment;
 
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -25,22 +26,39 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.squareup.picasso.Picasso;
 
+import org.joda.time.DateTime;
 import org.parceler.Parcels;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 import psp.weatherdam.Constantes;
 import psp.weatherdam.R;
+import psp.weatherdam.interfaces.GoogleMapsAPI;
+import psp.weatherdam.interfaces.OpenWeatherAPI;
 import psp.weatherdam.pojo.LocalizacionEnMapa;
 import psp.weatherdam.pojo.TiempoDelDia;
+import psp.weatherdam.pojo.googlemapsdetail.BusquedaMapsDetail;
+import psp.weatherdam.pojo.openweather.BusquedaOpenWeather;
+import psp.weatherdam.retrofit.RetrofitApplication;
+import retrofit.Call;
+import retrofit.Callback;
+import retrofit.Response;
+import retrofit.Retrofit;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class MapFragment extends Fragment {
-    MapView mMapView;
+    private MapView mMapView;
     private GoogleMap googleMap;
     LocalizacionEnMapa localiz;
     TiempoDelDia tiempoDelDia;
+    RetrofitApplication retrofitApplication;
+    BusquedaOpenWeather tiempoActual;
+    DateTime fecha;
 
     public MapFragment() {
         // Required empty public constructor
@@ -52,14 +70,33 @@ public class MapFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_map, container, false);
 
+        String placeid = getArguments().getString("placeid");
+        fecha = new DateTime(new Date());
+        fecha = fecha.plusHours(1);
+        //Inicia los servicios Retrofit
+        retrofitApplication = (RetrofitApplication) getActivity().getApplication();
+        retrofitApplication.iniciarRetrofit();
+
+        Retrofit retrofit = retrofitApplication.getRetrofitGoogleDetail();
+        GoogleMapsAPI api = retrofit.create(GoogleMapsAPI.class);
+        Call<BusquedaMapsDetail> llamada = api.getMapsDetail(placeid);
+
+        llamada.enqueue(new Callback<BusquedaMapsDetail>() {
+            @Override
+            public void onResponse(Response<BusquedaMapsDetail> response, Retrofit retrofit) {
+                setearDatos(response.body());
+            }
+
+            @Override
+            public void onFailure(Throwable t) {
+
+            }
+        });
+
         mMapView = (MapView) rootView.findViewById(R.id.mapa);
         mMapView.onCreate(savedInstanceState);
 
         mMapView.onResume(); // needed to get the map to display immediately
-
-
-        localiz = Parcels.unwrap(getArguments().getParcelable(Constantes.PARCEL_LOCATION));
-        tiempoDelDia = Parcels.unwrap(getArguments().getParcelable(Constantes.PARCEL_WEATHERNOW));
 
         try {
             MapsInitializer.initialize(getActivity().getApplicationContext());
@@ -130,5 +167,43 @@ public class MapFragment extends Fragment {
         });
 
         return rootView;
+    }
+
+    private void setearDatos(BusquedaMapsDetail body) {
+        OpenWeatherAPI api = retrofitApplication.getRetrofitOpenWeather().create(OpenWeatherAPI.class);
+        Call<BusquedaOpenWeather> llamada2 = api.getBusquedaOpenWeather(body.getResult().getGeometry().getLocation().getLat(),
+                body.getResult().getGeometry().getLocation().getLng());
+
+        //Estos son los datos meteorologicos actuales de Sevilla
+
+        llamada2.enqueue(new Callback<BusquedaOpenWeather>() {
+            @Override
+            public void onResponse(Response<BusquedaOpenWeather> response, Retrofit retrofit) {
+                //ESTO GUARDA LOS DATOS DE LA BUSQUEDA PARA CUANDO SE CAMBIE EL FRAGMENT A "MAPA"
+                tiempoActual = response.body();
+
+                localiz = new LocalizacionEnMapa(tiempoActual.getName(),tiempoActual.getCoord().getLat(),tiempoActual.getCoord().getLon());
+
+                List<String> listaTemp = new ArrayList<>();
+                List<String> listaViento = new ArrayList<>();
+
+                listaTemp.add(String.valueOf(tiempoActual.getMain().getTempMin()+"º - "+tiempoActual.getMain().getTempMax()+"º"));
+                listaViento.add(String.valueOf(tiempoActual.getWind().getSpeed()));
+
+                tiempoDelDia = new TiempoDelDia(tiempoActual.getName(),
+                        fecha.getDayOfWeek(),
+                        fecha.getDayOfMonth()+"/"+fecha.getMonthOfYear()+"/"+fecha.getYear(),
+                        tiempoActual.getWeather().get(0).getDescription(),
+                        tiempoActual.getWeather().get(0).getIcon(),
+                        listaTemp,
+                        listaViento);
+
+            }
+
+            @Override
+            public void onFailure(Throwable t) {
+
+            }
+        });
     }
 }

@@ -1,6 +1,7 @@
 package psp.weatherdam.fragment;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
@@ -11,23 +12,33 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-import org.parceler.Parcels;
-
+import psp.weatherdam.MainActivity;
 import psp.weatherdam.R;
 import psp.weatherdam.interfaces.GoogleMapsAPI;
+import psp.weatherdam.interfaces.IBusquedaListener;
+import psp.weatherdam.interfaces.IHistorialListener;
 import psp.weatherdam.pojo.googlemapsautocomp.Prediction;
 import psp.weatherdam.pojo.googlemapsdetail.BusquedaMapsDetail;
 import psp.weatherdam.retrofit.DelayAutoCompleteTextView;
 import psp.weatherdam.retrofit.PlacesAutoCompleteAdapter;
 import psp.weatherdam.retrofit.RetrofitApplication;
 import retrofit.Call;
+import retrofit.Callback;
+import retrofit.Response;
 import retrofit.Retrofit;
 
 /**
  * Created by Jose on 09/12/2016.
  */
-public class BusquedaDialogFragment extends DialogFragment {
+public class BusquedaDialogFragment extends DialogFragment{
     Prediction prediccion;
+    IBusquedaListener busquedaL;
+    Context ctx;
+
+    public BusquedaDialogFragment(Context ctx) {
+        this.ctx = ctx;
+        busquedaL = (IBusquedaListener) ctx;
+    }
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -54,15 +65,27 @@ public class BusquedaDialogFragment extends DialogFragment {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String nombreSitio = autoComplete.getText().toString();
-                if (prediccion != null && nombreSitio.equalsIgnoreCase(prediccion.getDescription())) {
+                String nombreSitio = autoComplete.getText().toString().split(",")[0];
+                if (prediccion != null && nombreSitio.equalsIgnoreCase(prediccion.getDescription().split(",")[0])) {
                     RetrofitApplication retrofitApplication = (RetrofitApplication) getActivity().getApplication();
                     retrofitApplication.iniciarRetrofit();
                     Retrofit retrofitActual = retrofitApplication.getRetrofitGoogleDetail();
 
                     GoogleMapsAPI api = retrofitActual.create(GoogleMapsAPI.class);
-                    Call<BusquedaMapsDetail> llamadaMaps = api.getMapsDetail(prediccion.getPlaceId());
+                    Call<BusquedaMapsDetail> llamadaMaps = api.getMapsDetail(prediccion.getPlace_id());
 
+                    llamadaMaps.enqueue(new Callback<BusquedaMapsDetail>() {
+                        @Override
+                        public void onResponse(Response<BusquedaMapsDetail> response, Retrofit retrofit) {
+                            BusquedaMapsDetail b = response.body();
+                            busquedaL.onClickBuscar(b);
+                        }
+
+                        @Override
+                        public void onFailure(Throwable t) {
+
+                        }
+                    });
                     // Esta línea de código debe ejecutarse cuando haga click en un elemento
                     // de la lista
                     BusquedaDialogFragment.this.getDialog().cancel();
@@ -81,4 +104,5 @@ public class BusquedaDialogFragment extends DialogFragment {
 
         return builder.create();
     }
+
 }

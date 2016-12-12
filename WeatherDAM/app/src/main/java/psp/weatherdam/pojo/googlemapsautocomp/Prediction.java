@@ -9,7 +9,7 @@ public class Prediction {
     private String description;
     private String id;
     private List<MatchedSubstring> matchedSubstrings = null;
-    private String placeId;
+    private String place_id;
     private String reference;
     private StructuredFormatting structuredFormatting;
     private List<Term> terms = null;
@@ -73,19 +73,19 @@ public class Prediction {
     /**
      * 
      * @return
-     *     The placeId
+     *     The place_id
      */
-    public String getPlaceId() {
-        return placeId;
+    public String getPlace_id() {
+        return place_id;
     }
 
     /**
      * 
-     * @param placeId
+     * @param place_id
      *     The place_id
      */
-    public void setPlaceId(String placeId) {
-        this.placeId = placeId;
+    public void setPlace_id(String place_id) {
+        this.place_id = place_id;
     }
 
     /**

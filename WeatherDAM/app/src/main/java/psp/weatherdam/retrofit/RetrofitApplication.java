@@ -77,6 +77,7 @@ public class RetrofitApplication extends Application {
                         break;
                     case GOOGLE_DETAIL:
                         url = originalHttpUrl.newBuilder()
+                                .addQueryParameter("language", "es_ES")
                                 .addQueryParameter("key", "AIzaSyBwZ60_83Uo8Ry1ohKeI4nEHDJq22GeY5c")
                                 .build();
                         break;
