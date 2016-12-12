@@ -1,0 +1,7 @@
+-Servicios Retrofit, con todas las peticiones (algunas en Application)
+-Filtro de Retrofit (initHTTP, mirar foro de PSP) para añadir los parámetros fijos antes de hacer la petición (donde este el servicio Retrofit)
+-AutoCompleteTextView para buscar, con un Dialog
+-JodaTime (en Application)
+-CardView de la vista MAPA
+-Historial en un Set<String> guardado en SharedPreferences
+-
